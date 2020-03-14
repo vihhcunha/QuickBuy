@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "MySqlConnection": "Server=localhost;uid=root;pwd=;database=CursoAngular"
+  }
+}
