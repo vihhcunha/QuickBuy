@@ -13,6 +13,11 @@ namespace QuickBuy.Dominio.Entidades
         { 
             get { return _mensagensValidacao ?? (_mensagensValidacao = new List<string>()); } 
         }
+        
+        public bool IsValid
+        {
+            get { return !MensagemValidacao.Any(); }
+        }
 
         protected void LimparMensagensDeValidacao()
         {
@@ -24,11 +29,12 @@ namespace QuickBuy.Dominio.Entidades
             MensagemValidacao.Add(mensagem);
         }
 
+        public string ObterMensagensValidacao()
+        {
+            return string.Join(". ", MensagemValidacao);
+        }
+
         public abstract void Validate();
 
-        protected bool EhValido
-        {
-            get { return !MensagemValidacao.Any(); }
-        }
     }
 }

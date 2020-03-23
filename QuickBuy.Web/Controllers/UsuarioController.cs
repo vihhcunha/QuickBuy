@@ -51,7 +51,7 @@ namespace QuickBuy.Web.Controllers
         {
             try
             {
-                var usuarioRetorno = _usuarioRepositorio.ObterPorEmailSenha(usuario.Email, usuario.Senha);
+                var usuarioRetorno = _usuarioRepositorio.Obter(usuario.Email, usuario.Senha);
 
                 if(usuarioRetorno != null)
                 {
@@ -59,6 +59,27 @@ namespace QuickBuy.Web.Controllers
                 }
 
                 return BadRequest("Usuário ou senha inválidos!");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message.ToString());
+            }
+        }
+
+        [HttpPost("CadastrarUsuario")]
+        public IActionResult CadastrarUsuario([FromBody] Usuario usuario)
+        {
+            try
+            {
+                var usuarioJaCadastrado = _usuarioRepositorio.Obter(usuario.Email);
+
+                if (usuarioJaCadastrado == null)
+                {
+                    _usuarioRepositorio.Adicionar(usuario);
+                    return Ok(usuario);
+                }
+
+                return BadRequest("Usuário já cadastrado!");
             }
             catch (Exception ex)
             {

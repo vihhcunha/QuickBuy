@@ -17,7 +17,8 @@ namespace QuickBuy.Repositorio.Config
                 .IsRequired();
 
             builder.Property(prod => prod.Preco)
-                .IsRequired();
+                .IsRequired()
+                .HasColumnType("decimal(19,4)");
 
             builder.Property(prod => prod.Descricao)
                 .IsRequired()
