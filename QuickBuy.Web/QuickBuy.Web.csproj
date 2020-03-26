@@ -27,6 +27,10 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\autorizacao\guardaRotas.ts" />
+    <None Remove="ClientApp\src\app\loja\carrinho\loja.carrinho.compras.ts" />
+    <None Remove="ClientApp\src\app\loja\efetivar\loja.efetivar.component.ts" />
+    <None Remove="ClientApp\src\app\loja\pesquisa\loja.pesquisa.component.ts" />
+    <None Remove="ClientApp\src\app\loja\produto\loja.produto.component.ts" />
     <None Remove="ClientApp\src\app\model\produto.ts" />
     <None Remove="ClientApp\src\app\model\usuario.ts" />
     <None Remove="ClientApp\src\app\Produto\Pesquisa\pesquisa.produto.component.ts" />
@@ -43,6 +47,10 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\autorizacao\guardaRotas.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\loja\carrinho\loja.carrinho.compras.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\loja\efetivar\loja.efetivar.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\loja\pesquisa\loja.pesquisa.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\loja\produto\loja.produto.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model\produto.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model\usuario.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\Produto\Pesquisa\pesquisa.produto.component.ts" />

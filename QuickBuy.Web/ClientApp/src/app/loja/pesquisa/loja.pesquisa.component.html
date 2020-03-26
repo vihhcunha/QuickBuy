@@ -1,0 +1,17 @@
+<div class="text-center">
+  <h3 class="padding-top-100px" *ngIf="!produtos">Carregando</h3>
+  <div class="row" style="align-items:stretch;" *ngIf="produtos">
+    <div class="col-6 col-md-4 col-lg-4" *ngFor="let p of produtos" style="align-self:stretch;" (click)="abrirProduto(p)">
+      <div class="card" style="height:100%;">
+        <div class="card-top" style="height:150px;">
+          <img  src="../../../../../arquivos/{{p.nomeArquivo}}" style="margin:0 auto; height:95%; margin-top:10px;" />
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ p.nome }}</h5>
+          <div class="card-text">{{ p.descricao.substring(0,60) + '...' }}</div>
+          <h5 class="h5" style="padding-top:10px;">R$ {{ p.preco }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

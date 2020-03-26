@@ -1,0 +1,43 @@
+<div class="text-center">
+  <div class="row">
+    <div class="col-12 col-md-8">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Preço</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of produtos">
+            <td style="vertical-align: middle;">
+              <img src="../../../../../Arquivos/{{ p.nomeArquivo }}" style="width:60px;" />
+            </td>
+            <td style="vertical-align: middle;">{{ p.nome }} </td>
+            <td style="vertical-align: middle;">
+              <input type="number" class="input-style" value="1" (change)="atualizarPreco(p, $event.target.value)" />
+            </td>
+            <td style="vertical-align: middle;">{{ p.preco | number:'1.2' }} </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="row">
+        <div class="card" style="width:100%;">
+          <div class="card-header">
+            Resumo
+          </div>
+          <div class="card-body">
+            <div class="margin-bottom-25px margin-top-50px">
+              Total: R$ 1250,00
+            </div>
+            <button class="btn btn-danger input-style margin-bottom-25px">Concluir compra</button>
+          </div>
+        </div>    
+      </div>
+    </div>
+  </div>
+</div>
