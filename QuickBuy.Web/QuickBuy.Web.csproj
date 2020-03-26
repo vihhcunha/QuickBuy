@@ -28,13 +28,17 @@
   <ItemGroup>
     <None Remove="ClientApp\src\app\autorizacao\guardaRotas.ts" />
     <None Remove="ClientApp\src\app\loja\carrinho\loja.carrinho.compras.ts" />
+    <None Remove="ClientApp\src\app\loja\compra-realizada\loja.compra.realizada.component.ts" />
     <None Remove="ClientApp\src\app\loja\efetivar\loja.efetivar.component.ts" />
     <None Remove="ClientApp\src\app\loja\pesquisa\loja.pesquisa.component.ts" />
     <None Remove="ClientApp\src\app\loja\produto\loja.produto.component.ts" />
+    <None Remove="ClientApp\src\app\model\itemPedido.ts" />
+    <None Remove="ClientApp\src\app\model\pedido.ts" />
     <None Remove="ClientApp\src\app\model\produto.ts" />
     <None Remove="ClientApp\src\app\model\usuario.ts" />
     <None Remove="ClientApp\src\app\Produto\Pesquisa\pesquisa.produto.component.ts" />
     <None Remove="ClientApp\src\app\Produto\produto.component.ts" />
+    <None Remove="ClientApp\src\app\servicos\pedido\pedido.servico.ts" />
     <None Remove="ClientApp\src\app\servicos\produto\produto.servico.ts" />
     <None Remove="ClientApp\src\app\servicos\usuario\usuario.servico.ts" />
     <None Remove="ClientApp\src\app\usuario\cadastro\cadastro.usuario.component.ts" />
@@ -48,13 +52,17 @@
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\autorizacao\guardaRotas.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\loja\carrinho\loja.carrinho.compras.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\loja\compra-realizada\loja.compra.realizada.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\loja\efetivar\loja.efetivar.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\loja\pesquisa\loja.pesquisa.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\loja\produto\loja.produto.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\model\itemPedido.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\model\pedido.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model\produto.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\model\usuario.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\Produto\Pesquisa\pesquisa.produto.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\Produto\produto.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\servicos\pedido\pedido.servico.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\servicos\produto\produto.servico.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\servicos\usuario\usuario.servico.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\usuario\cadastro\cadastro.usuario.component.ts" />

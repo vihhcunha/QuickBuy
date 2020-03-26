@@ -11,7 +11,7 @@
           <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
             <a class="nav-link text-dark" [routerLink]='["/"]'>Home</a>
           </li>
-          <li class="nav-item" [routerLinkActive]='["link-active"]'>
+          <li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="usuarioAdministrador()">
             <a class="nav-link text-dark" [routerLink]='["/pesquisar-produto"]'>Produto</a>
           </li>
           <li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="!usuarioLogado()">
@@ -28,9 +28,15 @@
             </ul>
           </li>
 
+          <li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="temItensCarrinho()">
+            <a class="nav-link text-dark" [routerLink]='["/loja-efetivar"]'>
+              <img src="assets/car.png" style="height:30px;" />
+            </a>
+          </li>
+
           <!--<li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="usuarioLogado()">
-            <a class="nav-link text-dark" [routerLink]='[""]' (click)="sair()">Sair</a>
-          </li>-->
+    <a class="nav-link text-dark" [routerLink]='[""]' (click)="sair()">Sair</a>
+  </li>-->
         </ul>
       </div>
     </div>

@@ -8,6 +8,7 @@
             <th>Produto</th>
             <th>Quantidade</th>
             <th>Preço</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -17,9 +18,12 @@
             </td>
             <td style="vertical-align: middle;">{{ p.nome }} </td>
             <td style="vertical-align: middle;">
-              <input type="number" class="input-style" value="1" (change)="atualizarPreco(p, $event.target.value)" />
+              <input type="number" class="input-style" value="1" placeholder="1" (change)="atualizarPreco(p, $event.target.value)" [(ngModel)]="p.quantidade" />
             </td>
             <td style="vertical-align: middle;">{{ p.preco | number:'1.2' }} </td>
+            <td style="vertical-align: middle;">
+              <button class="btn btn-danger input-style" style="width:100%;" (click)="remover(p)">Remover</button>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -32,9 +36,9 @@
           </div>
           <div class="card-body">
             <div class="margin-bottom-25px margin-top-50px">
-              Total: R$ 1250,00
+              Total: {{ total | number:'1.2' }}
             </div>
-            <button class="btn btn-danger input-style margin-bottom-25px">Concluir compra</button>
+            <button class="btn btn-danger input-style margin-bottom-25px" (click)="efetivarCompra()">Concluir compra</button>
           </div>
         </div>    
       </div>
