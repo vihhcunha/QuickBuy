@@ -30,7 +30,7 @@
     "jquery": "^3.4.1",
     "popper.js": "^1.16.1",
     "rxjs": "^6.0.0",
-    "underscore": "^1.9.2",
+    "underscore": "^1.12.1",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
